@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='stylesheet.css')}}" />
+    <title>GETJS Aboutpage</title>
+    <link rel="stylesheet" href="../static/about.css">
+    <script src="https://kit.fontawesome.com/f935d9d29d.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
+        <a class="navbar-brand" href="">GetJS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#loginModalCenter">Login</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModalCenter" tabindex="-1" role="dialog" aria-labelledby="loginModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalCenterTitle">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <a href="/login" class="btn btn-primary btn-lg btn-block" role="button">Uploader Login</a>
+                    <a href="/register" class="btn btn-dark btn-lg btn-block" role="button">Register to GetJS</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-section">
+        <h1>About Us</h1>
+        <h5>GetJS was formed to solve the age old developers' problem - </h5>
+        <h5>Finding quality, verified Code Snippets</h5>
+        <br>
+        <h5>GetJS is a Code Snippet Recommender is a system which allows the users to search JS code snippets by giving input in the form of string of keywords.</h5>
+        <h5>The user can also copy the code snippet using the copy button, view and rate snippets.</h5> 
+        <br>
+        <h5>GetJS makes it easy for developers' community to quickly search the short but commonly used code snippets using valid keywords.</h5> 
+        <h5>Also, it gives the developers' community a facility to upload and hence contribute their own code snippets which will then be available to the other developers as well.</h5>
+        <p></p>
+    </div>
+    <br>
+    <br>
+    <h1 style="text-align:center; color:antiquewhite;">Our Team</h1>
+    <br>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="card">
+                <img class="card-img-top" src="../static/anurag.jpg" alt="Anurag" style="width:100%">
+                <div class="card-body">
+                    <h2 class="card-title">Anurag Ghosh</h2>
+                    <h4 class="card-subtitle mb-2 text-muted">Member</h4>
+                    <p>Masters in Technology in Computer Science and Information Security(IIIT, Hyderabad)</p>
+                    <p><i class="fa fa-2x fa-envelope" style="color: red;"></i>    anurag.gh@students.iiit.ac.in</p>
+                    <a href="https://www.linkedin.com/in/anurag-ghosh-b5796a178/"><i class="fa fa-3x fa-linkedin-square" style="color: blue;"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card">
+                <img class="card-img-top" src="../static/anuja.jpg" alt="Anuja" style="width:100%">
+                <div class="card-body">
+                    <h2 class="card-title">Anuja Gulhane</h2>
+                    <h4 class="card-subtitle mb-2 text-muted">Member</h4>
+                    <p class="card-text">Masters in Technology in Computer Science Engineering(IIIT, Hyderabad)</p>
+                    <p><i class="fa fa-2x fa-envelope" style="color: red;"></i>    anuja.gulhane@students.iiit.ac.in</p>
+                    <a href="https://www.linkedin.com/in/anuja-gulhane/"><i class="fa fa-3x fa-linkedin-square" style="color: blue;"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card">
+                <img class="card-img-top" src="../static/akhilesh.jpg" alt="Akhilesh" style="width:100%">
+                <div class="card-body">
+                    <h2 class="card-title">Akhilesh Giriboyina</h2>
+                    <h4 class="card-subtitle mb-2 text-muted">Member</h4>
+                    <p class="card-text">Masters in Technology in Computer Science and Information Security(IIIT, Hyderabad)</p>
+                    <p><i class="fa fa-2x fa-envelope" style="color: red;"></i>    akhilesh.giriboyina@students.iiit.ac.in</p>
+                    <a href="https://www.linkedin.com/in/akhilesh-giriboyina-a22378247/"><i class="fa fa-3x fa-linkedin-square" style="color: blue;"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card">
+                <img class="card-img-top" src="../static/sharanya.jpg" alt="Sharanya" style="width:100%">
+                <div class="card-body">
+                    <h2 class="card-title">Sharanya Bhattacharya</h2>
+                    <h4 class="card-subtitle mb-2 text-muted">Member</h4>
+                    <p>Masters in Technology in Computer Science Engineering(IIIT, Hyderabad)</p>
+                    <p><i class="fa fa-2x fa-envelope" style="color: red;"></i>    sharanya.b@students.iiit.ac.in</p>
+                    <a href="https://www.linkedin.com/in/sharanya-bhattacharya/"><i class="fa fa-3x fa-linkedin-square" style="color: blue;"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h1 style="color:azure; text-align:center;">Our Mentor</h1>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4" centered>
+            <div class="card">
+                <img class="card-img-top" src="../static/saianirudh.jpg" alt="Saianirudh" style="width:100%">
+                <div class="card-body">
+                    <h2 class="card-title">Sai Anirudh Karre</h2>
+                    <h4 class="card-subtitle mb-2 text-muted">Mentor</h4>
+                    <p>Product @ SumTotal | PhD Scholar @ IIITH</p>
+                    <p><i class="fa fa-2x fa-envelope" style="color: red;"></i>    saianirudh.karri@research.iiit.ac.in</p>
+                    <!-- <i class="fa fa-envelope" style="color: red;"></i> -->
+                    
+                        
+                    
+                    <a href="https://www.linkedin.com/in/sai11101989/"><i class="fa fa-3x fa-linkedin-square" style="color: blue;"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

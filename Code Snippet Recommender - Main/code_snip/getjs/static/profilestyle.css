@@ -1,0 +1,124 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        .bg-cover {
+            width: 100%;
+            height: 695px;
+            /* background: url("https://source.unsplash.com/7JX0-bfiuxQ/1200x1200") no-repeat center; */
+            /* background-size: cover; */
+            object-fit: cover;
+        }
+
+        .bg-image {
+            filter: blur(8px);
+            -webkit-filter: blur(3px);
+            width: 100%;
+            height: 910px;
+            object-fit: cover;
+        }
+
+        .center {
+            position: absolute;
+            height: X px;
+            width: Y px;
+            left: 8%;
+            top: 50%;
+            margin-top: - X/2 px;
+            margin-left: - Y/2 px;
+        }
+
+        .circle {
+            background: black;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+
+        .text-block {
+            position: absolute;
+            bottom: 0;
+            background: rgb(212, 0, 0);
+            background: rgb(218, 114, 83, 0.8);
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .plus-image {
+            left: 25%;
+            top: 35%;
+            position: absolute;
+            margin-top: -25px;
+            margin-left: -25px;
+        }
+
+        .centered {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #da7253;
+            min-width: 100px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            right: 10px;
+            left: auto;
+        }
+
+        div.ex1 {
+            width: 1000px;
+            height: 100px;
+            /* margin-top: 1%; */
+            /* margin-left: 1%; */
+        }
+
+        .cropped2 {
+            width: 55px;
+            /* width of container */
+            height: 55px;
+            /* height of container */
+            object-fit: cover;
+        }
+
+        .my-conv-form-wrapper textarea {
+            height: 30px;
+            overflow: hidden;
+            resize: none;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /*Resize the wrap to see the search bar change!*/
+        .wrap {
+            width: 30%;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .topnav-right {
+            float: right;
+            margin-right: 5;
+        }
+
+        .navbar-right {
+            margin-right: 0;
+        }

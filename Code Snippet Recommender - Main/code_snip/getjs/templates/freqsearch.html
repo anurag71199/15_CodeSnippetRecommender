@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Frequent Snippets</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='stylesheet.css')}}" />
+    <link rel="stylesheet" href="../static/search.css">
+    <link rel="stylesheet" href="../static/freqsearch.css">
+    <link rel="stylesheet" href="../static/searchfeats.css">
+    <script>
+        function CopyToClipboard(id) {
+            var code = document.getElementById(id);
+            code.select();
+            document.execCommand("copy");
+            console.log("Code coppied");
+        }
+            // 110417
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
+        <a class="navbar-brand" href="">GetJS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#loginModalCenter">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li> -->
+            </ul>
+        </div>
+    </nav>
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModalCenter" tabindex="-1" role="dialog" aria-labelledby="loginModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalCenterTitle">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <a href="/login" class="btn btn-primary btn-lg btn-block" role="button">Uploader Login</a>
+                    <a href="/register" class="btn btn-dark btn-lg btn-block" role="button">Register to GetJS</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bo">
+        <div class="area">
+            <br><br>
+            <h1>Top Rated Searches </h1>
+            <br><br>
+            <ol>
+                <!-- <div> -->
+                {%for i in range(0, 10)%}
+                <br><br>
+                <div id="grad1" style="position: relative; opacity: 1;">
+                    <!-- <li></li> -->
+                    <div>
+                        <span style="float:left">
+                            <h2 style="margin-left: 15px; margin-top: 15px;">Name :
+                                <strong>{{modified_list[i]['name']}}</strong>
+                            </h2>
+                        </span>
+                        <span style="float:right">
+                            <h3 style="margin-right: 20px; margin-top: 15px;">Rating : {{modified_list[i]['rating']}}
+                            </h3>
+                        </span>
+                    </div>
+                    <br><br>
+                    <br>
+                    <h3 style="margin-left: 15px;">Description : {{modified_list[i]['description']}}</h3>
+                    <br>
+                    <h3 style="margin-left: 15px;">Code : </h3>
+
+                    <span style="float:right; margin-right:15%;">
+                        <button class="copy-button" onclick=" CopyToClipboard('code_'+{{i}})"> Copy</button>
+                    </span>
+                    <br>
+                    <br>
+                    <div class="wrapper">
+                        <textarea id="code_{{i}}" readonly>{{modified_list[i]['code']}}</textarea>
+                    </div>
+
+                    <br>
+                    <br>
+                    <h3 style="margin-left: 15px;">Submitted by : {{modified_list[i]['sub']}}</h3>
+                    <br>
+                    <h3 style="margin-left: 15px;">Uploaded on : {{modified_list[i]['update']}}</h3>
+                    <span style="float:right">
+                        <!-- <a href="{{url_for('static', filename='like-before.png')}}"> -->
+                            <img src="{{url_for('static', filename='like-before.png')}}" class="like"
+                                onmouseover="this.src=`{{url_for('static', filename='like-after.png')}}`;"
+                                onmouseout="this.src=`{{url_for('static', filename='like-before.png')}}`;"
+                                onclick="window.location.href = '/login'">
+                        <!-- </a> -->
+                            <img src="{{url_for('static', filename='dislike-before.png')}}" class="like"
+                                onmouseover="this.src=`{{url_for('static', filename='dislike-after.png')}}`;"
+                                onmouseout="this.src=`{{url_for('static', filename='dislike-before.png')}}`;" 
+                                onclick="window.location.href = '/login'">
+                    </span>
+                    <br>
+                    <br>
+                </div>
+                {%endfor%}
+                <!-- </div> -->
+            </ol>
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
